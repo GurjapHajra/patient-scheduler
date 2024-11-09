@@ -30,6 +30,16 @@ class my_navbar extends React.Component {
                     Professional
                   </NavLink>
                 </li>
+                <li className="nav_li">
+                  <NavLink to="/signup-professional" className="navlink">
+                    Finder
+                  </NavLink>
+                </li>
+                <li className="nav_right">
+                  <NavLink to="/signup-professional" className="navlink">
+                    Log In
+                  </NavLink>
+                </li>
               </ul>
             </Nav>
           </Navbar.Collapse>
