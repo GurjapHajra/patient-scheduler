@@ -10,7 +10,7 @@ class my_navbar extends React.Component {
       <>
         <link rel="stylesheet" href="App.css" />
         <link rel="stylesheet" href="index.css" />
-        <Navbar className="mt-4" expand="sm" collapseOnSelect fixed="top">
+        <Navbar className="navbar-blur pt-4" expand="sm" collapseOnSelect fixed="top">
           <Navbar.Toggle />
           <Navbar.Collapse>
             <Nav>
