@@ -10,14 +10,14 @@ class Header extends React.Component {
       <>
         <link rel="stylesheet" href="App.css" />
         <link rel="stylesheet" href="index.css" />
-        <Navbar className="myBlue" sticky="top" expand="sm" collapseOnSelect>
-          <Navbar.Brand>
-            <a href="https://fabienthich.github.io/">
-              <img src="favicon_io/favicon.ico" className="icon" />
-            </a>
-          </Navbar.Brand>
+        <Navbar
+          className="align-items-left justify-content-center"
+          sticky="top"
+          expand="sm"
+          collapseOnSelect
+        >
           <Navbar.Toggle />
-          <Navbar.Collapse className="align navbar-toggle-icon">
+          <Navbar.Collapse>
             <Nav>
               <ul>
                 <li>
@@ -27,21 +27,9 @@ class Header extends React.Component {
                 </li>
                 <li>
                   <NavLink to="/projects" className="navlink">
-                    Projects
+                    Sign Up
                   </NavLink>
                 </li>
-                {/*<li><Link className='navlink'>Working...</Link></li>*/}
-                <li>
-                  <NavLink to="/internship" className="navlink">
-                    Internship Logs
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/education" className="navlink">
-                    Education
-                  </NavLink>
-                </li>
-                {/*<li><NavLink to="/contact" className='navlink'>Contacts</Link></li>8*/}
               </ul>
             </Nav>
           </Navbar.Collapse>
