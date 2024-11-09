@@ -42,6 +42,9 @@ ul {
 
 .nav_li:hover {
   background-color: #008080 ;
+  transform: scale(1.05);
+  filter: brightness(150%);
+  z-index: 100;
 }
 
 .nav_right {

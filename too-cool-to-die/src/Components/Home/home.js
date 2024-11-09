@@ -12,12 +12,12 @@ function Home() {
           <div className = "buttonContainer">
             <button className="button" style={{backgroundColor: "#008080"}}>
               <NavLink style={{color: "white"}} to="/signup-patient" className="navlink">
-                Patient
+                New Patient
               </NavLink>
             </button>
             <button className="button" style={{backgroundColor: "#373130"}}>
               <NavLink style={{color: "white"}} to="/signup-professional" className="navlink">
-                Professional
+                New Professional
               </NavLink>
             </button>
           </div>
