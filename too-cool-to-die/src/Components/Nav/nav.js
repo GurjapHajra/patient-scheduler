@@ -4,30 +4,30 @@ import "./nav.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { Nav, Navbar } from "react-bootstrap";
 
-class Header extends React.Component {
+class my_navbar extends React.Component {
   render() {
     return (
       <>
         <link rel="stylesheet" href="App.css" />
         <link rel="stylesheet" href="index.css" />
-        <Navbar
-          className="align-items-left justify-content-center"
-          sticky="top"
-          expand="sm"
-          collapseOnSelect
-        >
+        <Navbar className="mt-4" sticky="top" expand="sm" collapseOnSelect>
           <Navbar.Toggle />
           <Navbar.Collapse>
             <Nav>
               <ul>
-                <li>
-                  <NavLink to="/home" className="navlink">
+                <li className="nav_li">
+                  <NavLink to="/" className="navlink">
                     Home
                   </NavLink>
                 </li>
-                <li>
-                  <NavLink to="/projects" className="navlink">
-                    Sign Up
+                <li className="nav_li">
+                  <NavLink to="/signup-patients" className="navlink">
+                    Patients
+                  </NavLink>
+                </li>
+                <li className="nav_li">
+                  <NavLink to="/signup-professional" className="navlink">
+                    Professional
                   </NavLink>
                 </li>
               </ul>
@@ -39,4 +39,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export default my_navbar;
