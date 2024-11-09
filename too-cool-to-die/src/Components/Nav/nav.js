@@ -15,7 +15,7 @@ class my_navbar extends React.Component {
           <Navbar.Collapse>
             <Nav>
               <ul>
-                <li className="nav_li">
+                <li className="nav_li nav_li_left">
                   <NavLink to="/" className="navlink">
                     Home
                   </NavLink>
@@ -28,6 +28,16 @@ class my_navbar extends React.Component {
                 <li className="nav_li">
                   <NavLink to="/signup-professional" className="navlink">
                     Professional
+                  </NavLink>
+                </li>
+                <li className="nav_li nav_li_right">
+                  <NavLink to="/signup-professional" className="navlink">
+                    Finder
+                  </NavLink>
+                </li>
+                <li className="nav_right nav_li_left nav_li_right">
+                  <NavLink to="/login" className="navlink">
+                    Log In
                   </NavLink>
                 </li>
               </ul>
