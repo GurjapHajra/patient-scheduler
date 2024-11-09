@@ -1,7 +1,9 @@
 import "./App.css";
 import React from "react";
 import Home from "./Components/Home/home"
-import Navbar from "./Components/Nav/nav.css/nav"
+import Navbar from "./Components/Nav/nav"
+import SignupPatient from "./Components/SignUp/signup-patient"
+import SignupProfessional from "./Components/SignUp/signup-professional"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -12,8 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route index element={<Home />} />
-          <Route path="home" element={<Home />} />
-          {/* <Route path="projects" element={<Projects />} /> */}
+          <Route path="signup-patients" element={<SignupPatient />} />
+          <Route path="signup-professional" element={<SignupProfessional />} />
         </Routes>
       </Router>
     </div>
