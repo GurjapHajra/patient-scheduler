@@ -31,7 +31,7 @@ class my_navbar extends React.Component {
                   </NavLink>
                 </li>
                 <li className="nav_li nav_li_right">
-                  <NavLink to="/signup-professional" className="navlink">
+                  <NavLink to="/finder" className="navlink">
                     Finder
                   </NavLink>
                 </li>
