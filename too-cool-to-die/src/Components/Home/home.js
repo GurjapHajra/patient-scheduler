@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "./assets/logo.png"
+import { NavLink } from "react-router-dom";
 import "./home.css";
 
 function Home() {
@@ -9,8 +10,16 @@ function Home() {
         <div className="mainContainer">
           <img src={logo} className="Logo" style={{ width: '50%', height: 'auto', marginTop: '10px' }} alt="logo"/>
           <div className = "buttonContainer">
-            <button className="button" style={{backgroundColor: "#008080"}}>Patient</button>
-            <button className="button" style={{backgroundColor: "#373130"}}>Professional</button>
+            <button className="button" style={{backgroundColor: "#008080"}}>
+              <NavLink style={{color: "white"}} to="/signup-patient" className="navlink">
+                Patient
+              </NavLink>
+            </button>
+            <button className="button" style={{backgroundColor: "#373130"}}>
+              <NavLink style={{color: "white"}} to="/signup-professional" className="navlink">
+                Professional
+              </NavLink>
+            </button>
           </div>
         </div>
       </div> 

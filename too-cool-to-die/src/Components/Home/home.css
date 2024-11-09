@@ -31,4 +31,11 @@
     font-size: 16px;
     border-radius: 5%;
     font-family: "Work Sans", sans-serif;
+    transition: transform 1s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.3s ease;
+}
+
+
+.button:hover {
+    transform: scale(1.12);
+    filter: brightness(150%)
 }
