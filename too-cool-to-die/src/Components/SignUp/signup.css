@@ -1,0 +1,16 @@
+.background {
+    background-image: url("../assets/bg.png");
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.form-label.form-label-auto {
+        
+    display: block;
+    float: none;
+    text-align: left;
+    width: 100%;
+  
+    }

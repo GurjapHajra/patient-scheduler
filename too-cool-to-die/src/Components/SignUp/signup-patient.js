@@ -3,6 +3,8 @@ function signup_patient() {
     return(
         <>
             <div className="background">
+                
+           
             </div>
         </>
     )

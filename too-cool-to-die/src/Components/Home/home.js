@@ -6,7 +6,7 @@ import "./home.css";
 function Home() {
   return (
     <>
-      <div className= "background backgroundImg" alt = "TCTD">
+      <div className= "background" alt = "TCTD">
         <div className="mainContainer">
           <img src={logo} style={{ width: '50%', height: 'auto', marginTop: '10px' }} alt="logo"/>
           <div className = "buttonContainer">
