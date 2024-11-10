@@ -12,9 +12,11 @@ function Login() {
             </div>
             <div className="user-box">
               <input id="password" type="password" name="" required="" />
-              <label>Password</label>
+              <label htmlFor="password">Password</label>
+              <input id="show-password" type="checkbox"/>
+              <label htmlFor="show-password">Show Password</label>
             </div>
-
+            
             <button onClick={logUser} className="button" style={{ backgroundColor: "#373130" }}>
               Log In
             </button>
@@ -27,8 +29,7 @@ function Login() {
 
 function logUser(event) {
     event.preventDefault();
-    let fetchedData;
-    let username = document.getElementById("username");
+    let id = document.getElementById("username");
     let password = document.getElementById("password");
 
     let data = null;
@@ -52,7 +53,7 @@ function logUser(event) {
         if (data) {
             data.forEach(item => {
                 console.log("Data found")
-                if (item.username == username && item.password == password) {
+                if (item.id == id && item.password == password) {
                     let loginSuccess = true;
                 }
             });
@@ -64,9 +65,7 @@ function logUser(event) {
         alert("Logged In")
     }
         
-
     processData();
-
 
         
 }
