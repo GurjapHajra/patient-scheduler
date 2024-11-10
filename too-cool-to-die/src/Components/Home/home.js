@@ -11,7 +11,7 @@ function Home() {
           <img src={logo} style={{ width: '50%', height: 'auto', marginTop: '10px' }} alt="logo"/>
           <div className = "buttonContainer">
             <button className="button" style={{backgroundColor: "#008080"}}>
-              <NavLink style={{color: "white"}} to="/signup-patient" className="navlink">
+              <NavLink style={{color: "white"}} to="/signup-patients" className="navlink">
                 New Patient
               </NavLink>
             </button>
