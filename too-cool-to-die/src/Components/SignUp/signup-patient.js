@@ -4,10 +4,6 @@ import axios from "axios";
 function SignupPatient() {
   function putPatient(event) {
     event.preventDefault();
-    axios.defaults.headers.post["Content-Type"] =
-      "application/json;charset=utf-8";
-    axios.defaults.headers.post["Access-Control-Allow-Methods"] = "*";
-    axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
     const article = {
       username: "username",
       password: "password",
@@ -15,18 +11,30 @@ function SignupPatient() {
       lastname: "lastname",
       gender: "gender",
       age: "age",
-      weigth: "weight",
+      weight: "weight", // Fix typo from "weigth"
       height: "height",
       description: "description",
     };
 
+    const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+    const apiUrl =
+      "https://tyraoeguv8.execute-api.us-east-1.amazonaws.com/items";
+
     axios
-      .put(
-        "https://tyraoeguv8.execute-api.us-east-1.amazonaws.com/items",
-        article
-      )
-      .then((response) => {});
+      .put(proxyUrl + apiUrl, article, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((response) => {
+        // handle response
+        console.log("Success:", response.data);
+      })
+      .catch((error) => {
+        console.error("Error:", error.response || error);
+      });
   }
+
   return (
     <>
       <div className="backgroundImg">
