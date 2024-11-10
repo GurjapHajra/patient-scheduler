@@ -46,6 +46,7 @@ function Login() {
       setIsLoggedIn(true);
       localStorage.setItem("isLoggedIn", "true");  // Store login state in localStorage
       navigate("/dashboard"); 
+      window.location.reload();
     } else {
       document.getElementById("message").innerHTML = "Invalid Username or Password";
     }
@@ -76,6 +77,7 @@ function Login() {
       </div>
     </>
   );
+
 }
 
 export default Login;

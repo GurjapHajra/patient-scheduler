@@ -53,7 +53,7 @@ function MyNavbar() {
               <li className="nav_right nav_li_left nav_li_right">
                 {isLoggedIn ? (
                   <NavLink to="/dashboard" className="navlink">
-                    Logged In
+                    Dashboard
                   </NavLink>
                 ) : (
                   <NavLink to="/login" className="navlink">
