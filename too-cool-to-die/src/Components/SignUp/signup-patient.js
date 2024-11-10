@@ -115,8 +115,6 @@ function SignupPatient() {
       </div>
     </>
   );
-
-  let e = document.getElementsByName("e");
 }
 
 export default SignupPatient;
