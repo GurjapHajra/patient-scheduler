@@ -10,12 +10,12 @@ class my_navbar extends React.Component {
       <>
         <link rel="stylesheet" href="App.css" />
         <link rel="stylesheet" href="index.css" />
-        <Navbar className="mt-4" expand="sm" collapseOnSelect fixed="top">
+        <Navbar className="navbar-blur pt-4" expand="sm" collapseOnSelect fixed="top">
           <Navbar.Toggle />
           <Navbar.Collapse>
             <Nav>
               <ul>
-                <li className="nav_li">
+                <li className="nav_li nav_li_left">
                   <NavLink to="/" className="navlink">
                     Home
                   </NavLink>
@@ -28,6 +28,16 @@ class my_navbar extends React.Component {
                 <li className="nav_li">
                   <NavLink to="/signup-professional" className="navlink">
                     Professional
+                  </NavLink>
+                </li>
+                <li className="nav_li nav_li_right">
+                  <NavLink to="/finder" className="navlink">
+                    Finder
+                  </NavLink>
+                </li>
+                <li className="nav_right nav_li_left nav_li_right">
+                  <NavLink to="/login" className="navlink">
+                    Log In
                   </NavLink>
                 </li>
               </ul>
