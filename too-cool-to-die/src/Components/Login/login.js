@@ -1,5 +1,56 @@
+import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import "./login.css";
+
 function Login() {
+  const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [data, setData] = useState(null);
+
+  // Check if the user is logged in when the component mounts
+  useEffect(() => {
+    const storedLoginStatus = localStorage.getItem("isLoggedIn");
+    if (storedLoginStatus === "true") {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const logUser = async (event) => {
+    event.preventDefault();
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    let loginSuccess = false;
+
+    async function fetchData() {
+      try {
+        const response = await fetch('https://tyraoeguv8.execute-api.us-east-1.amazonaws.com/items');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        console.log(data);
+        data.forEach(item => {
+          if (item.id === username && item.password === password) {
+            loginSuccess = true;
+          }
+        });
+      } catch (error) {
+        console.error('Fetch error:', error);
+      }
+    }
+
+    await fetchData();
+
+    if (loginSuccess) {
+      setIsLoggedIn(true);
+      localStorage.setItem("isLoggedIn", "true");  // Store login state in localStorage
+      navigate("/dashboard"); 
+    } else {
+      document.getElementById("message").innerHTML = "Invalid Username or Password";
+    }
+  };
+
   return (
     <>
       <div className="backgroundImg">
@@ -13,11 +64,9 @@ function Login() {
             <div className="user-box">
               <input id="password" type="password" name="" required="" />
               <label htmlFor="password">Password</label>
-              
             </div>
             <div className="user-box-2" style={{}}>
-              <input id="show-password" type="checkbox"/>
-              <label htmlFor="show-password">Show Password</label>
+              <label id="message"></label>
             </div>
             <button onClick={logUser} className="button" style={{ backgroundColor: "#373130" }}>
               Log In
@@ -27,59 +76,6 @@ function Login() {
       </div>
     </>
   );
-}
-
-// document.getElementById('show-password').addEventListener('change', function() {
-//   var passwordField = document.getElementById('password');
-  
-//   if (this.checked) {
-//     passwordField.type = 'text'; // Show password
-//   } else {
-//     passwordField.type = 'password'; // Hide password
-//   }
-// });
-
-function logUser(event) {
-    event.preventDefault();
-    let id = document.getElementById("username");
-    let password = document.getElementById("password");
-
-    let data = null;
-    let loginSuccess = false;
-
-    async function fetchData() {
-        try {
-            const response = await fetch('https://tyraoeguv8.execute-api.us-east-1.amazonaws.com/items');
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            data = await response.json(); 
-            console.log(data);
-        } catch (error) {
-            console.error('Fetch error:', error);
-        }
-    }
-
-    async function processData() {
-        await fetchData();
-        if (data) {
-            data.forEach(item => {
-                console.log("Data found")
-                if (item.id == id && item.password == password) {
-                    let loginSuccess = true;
-                }
-            });
-        } else {
-            console.log('Data is still loading...');
-        }
-    }
-    if (loginSuccess) {
-        alert("Logged In")
-    }
-        
-    processData();
-
-        
 }
 
 
