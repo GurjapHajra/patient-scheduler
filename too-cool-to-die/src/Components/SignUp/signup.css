@@ -7,11 +7,11 @@ html {
     gap: 20px;
   }
   
-  .input-row .user-box {
+  .input-row .user-box .user-box-2 {
     flex: 1;
   }
   
-  .signup-box1 {
+  .signup-box .signup-box1 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -25,18 +25,18 @@ html {
     border-radius: 10px;
   }
   
-  .signup-box1 h2 {
+  .signup-box .signup-box1 h2 {
     margin: 0 0 30px;
     padding: 0;
     color: #fff;
     text-align: center;
   }
   
-  .signup-box1 .user-box {
+  .signup-box .signup-box1 .user-box .user-box-2 {
     position: relative;
   }
   
-  .signup-box1 .user-box input {
+  .signup-box .signup-box1 .user-box input .user-box-2 input{
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
@@ -47,7 +47,7 @@ html {
     outline: none;
     background: transparent;
   }
-  .signup-box1 .user-box label {
+  .signup-box .signup-box1 .user-box label .user-box-2 label{
     position: absolute;
     top: 0;
     left: 0;
@@ -58,15 +58,15 @@ html {
     transition: 0.5s;
   }
   
-  .signup-box1 .user-box input:focus ~ label,
-  .signup-box1 .user-box input:valid ~ label {
+  .signup-box .signup-box1 .user-box input:focus ~ label .user-box-2 input:focus ~ label,
+  .signup-box .signup-box1 .user-box input:valid ~ label .user-box-2 input:valid ~ label{
     top: -20px;
     
     color: #e2e2e2;
     font-size: 12px;
   }
   
-  .user-box select {
+  .user-box select .user-box-2 select{
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
@@ -82,7 +82,7 @@ html {
     color: black;
   }
   
-  .signup-box1 form a {
+  .signup-box .signup-box1 form a {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
@@ -96,7 +96,7 @@ html {
     letter-spacing: 4px;
   }
   
-  .user-box textarea {
+  .user-box textarea .user-box-2 textarea{
     width: 100%;
     padding: 10px;
     font-size: 16px;
