@@ -67,7 +67,7 @@ function SignupPatient() {
               </div>
             </div>
 
-            <button className="button" style={{ backgroundColor: "#373130" }}>
+            <button className="button" style={{ backgroundColor: "#373130", marginTop: '15px' }}>
               Sign Up
             </button>
           </form>
