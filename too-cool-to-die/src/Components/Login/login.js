@@ -59,6 +59,7 @@ function Login() {
       document.getElementById("message").innerHTML =
         "Invalid Username or Password";
     }
+    window.location.reload();
   };
 
   return (
