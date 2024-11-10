@@ -38,7 +38,7 @@ function SignupPatient() {
 
   return (
     <>
-      <div className="backgroundImg">
+      <div className="background">
         <div className="signup-box mt-5">
           <h2>New Patient Application</h2>
           <form onSubmit={putPatient}>

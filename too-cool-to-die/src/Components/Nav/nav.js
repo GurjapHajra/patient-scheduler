@@ -19,7 +19,6 @@ function MyNavbar() {
     setIsLoggedIn(false);
     localStorage.removeItem("isLoggedIn");  // Remove login state from localStorage
   };
-  
 
   return (
     <>
@@ -31,32 +30,50 @@ function MyNavbar() {
           <Nav>
             <ul>
               <li className="nav_li nav_li_left">
-                <NavLink to="/" className="navlink">
+                <NavLink 
+                  to="/" 
+                  className={({ isActive }) => isActive ? "navlink active" : "navlink"}
+                >
                   Home
                 </NavLink>
               </li>
               <li className="nav_li">
-                <NavLink to="/signup-patients" className="navlink">
+                <NavLink 
+                  to="/signup-patients" 
+                  className={({ isActive }) => isActive ? "navlink active" : "navlink"}
+                >
                   Patients
                 </NavLink>
               </li>
               <li className="nav_li">
-                <NavLink to="/signup-professional" className="navlink">
+                <NavLink 
+                  to="/signup-professional" 
+                  className={({ isActive }) => isActive ? "navlink active" : "navlink"}
+                >
                   Professional
                 </NavLink>
               </li>
               <li className="nav_li nav_li_right">
-                <NavLink to="/finder" className="navlink">
+                <NavLink 
+                  to="/finder" 
+                  className={({ isActive }) => isActive ? "navlink active" : "navlink"}
+                >
                   Finder
                 </NavLink>
               </li>
               <li className="nav_right nav_li_left nav_li_right">
                 {isLoggedIn ? (
-                  <NavLink to="/dashboard" className="navlink">
-                    Logged In
+                  <NavLink 
+                    to="/dashboard" 
+                    className={({ isActive }) => isActive ? "navlink active" : "navlink"}
+                  >
+                    Dashboard
                   </NavLink>
                 ) : (
-                  <NavLink to="/login" className="navlink">
+                  <NavLink 
+                    to="/login" 
+                    className={({ isActive }) => isActive ? "navlink active" : "navlink"}
+                  >
                     Log In
                   </NavLink>
                 )}
