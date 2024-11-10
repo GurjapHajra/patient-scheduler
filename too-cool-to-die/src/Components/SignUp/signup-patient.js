@@ -19,7 +19,7 @@ function SignupPatient() {
       height: "height",
       description: "description",
     };
-    
+
     axios
       .put(
         "https://tyraoeguv8.execute-api.us-east-1.amazonaws.com/items",
@@ -107,8 +107,6 @@ function SignupPatient() {
       </div>
     </>
   );
-
-  let e = document.getElementsByName("e");
 }
 
 export default SignupPatient;
