@@ -13,10 +13,12 @@ function Login() {
             <div className="user-box">
               <input id="password" type="password" name="" required="" />
               <label htmlFor="password">Password</label>
+              
+            </div>
+            <div className="user-box-2" style={{}}>
               <input id="show-password" type="checkbox"/>
               <label htmlFor="show-password">Show Password</label>
             </div>
-            
             <button onClick={logUser} className="button" style={{ backgroundColor: "#373130" }}>
               Log In
             </button>
@@ -26,6 +28,16 @@ function Login() {
     </>
   );
 }
+
+document.getElementById('show-password').addEventListener('change', function() {
+  var passwordField = document.getElementById('password');
+  
+  if (this.checked) {
+    passwordField.type = 'text'; // Show password
+  } else {
+    passwordField.type = 'password'; // Hide password
+  }
+});
 
 function logUser(event) {
     event.preventDefault();
