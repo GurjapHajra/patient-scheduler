@@ -97,12 +97,12 @@ html {
 }
 
 .user-box-2 textarea {
-  width: 100%; /* Full width of the container */
+  width: 100%;
   padding: 10px;
   font-size: 16px;
   color: #000;
   background-color: #f2f2f2;
   border: 1px solid #ccc;
   border-radius: 5px;
-  resize: vertical; /* Allows vertical resizing only */
+  resize: vertical;
 }
