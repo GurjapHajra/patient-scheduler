@@ -1,9 +1,9 @@
 import "./signup.css";
-
 function signup_patient() {
     return(
         <>
-        Sign up for patients
+            <div className="background">
+            </div>
         </>
     )
 }
