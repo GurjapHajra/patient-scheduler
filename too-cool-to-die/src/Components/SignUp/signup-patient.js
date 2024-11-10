@@ -5,15 +5,15 @@ function SignupPatient() {
   function putPatient(event) {
     event.preventDefault();
     const article = {
-      username: "username",
-      password: "password",
-      firstname: "firstname",
-      lastname: "lastname",
-      gender: "gender",
-      age: "age",
-      weight: "weight", // Fix typo from "weigth"
-      height: "height",
-      description: "description",
+      id: document.getElementById("username").value,
+      password: document.getElementById("password").value,
+      firstname: document.getElementById("firstname").value,
+      lastname: document.getElementById("lastname").value,
+      gender: document.getElementById("gender").value,
+      age: document.getElementById("age").value,
+      weight: document.getElementById("weight").value,
+      height: document.getElementById("height").value,
+      description: document.getElementById("description").value,
     };
 
     const proxyUrl = "https://cors-anywhere.herokuapp.com/";
@@ -29,6 +29,7 @@ function SignupPatient() {
       .then((response) => {
         // handle response
         console.log("Success:", response.data);
+        event.target.reset();
       })
       .catch((error) => {
         console.error("Error:", error.response || error);
@@ -40,7 +41,7 @@ function SignupPatient() {
       <div className="backgroundImg">
         <div className="signup-box mt-5">
           <h2>New Patient Application</h2>
-          <form>
+          <form onSubmit={putPatient}>
             <div className="input-row">
               <div className="user-box-2">
                 <input type="text" name="username" id="username" />
@@ -105,7 +106,7 @@ function SignupPatient() {
 
             <button
               className="button"
-              onClick={putPatient}
+              type="submit"
               style={{ backgroundColor: "#373130", marginTop: "15px" }}
             >
               Sign Up
