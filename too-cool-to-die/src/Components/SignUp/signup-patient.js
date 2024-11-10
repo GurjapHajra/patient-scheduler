@@ -1,4 +1,32 @@
+import "./signup.css";
+import axios from "axios";
+
 function SignupPatient() {
+  function putPatient(event) {
+    event.preventDefault();
+    axios.defaults.headers.post["Content-Type"] =
+      "application/json;charset=utf-8";
+    axios.defaults.headers.post["Access-Control-Allow-Methods"] = "*";
+    axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
+    const article = {
+      username: "username",
+      password: "password",
+      firstname: "firstname",
+      lastname: "lastname",
+      gender: "gender",
+      age: "age",
+      weigth: "weight",
+      height: "height",
+      description: "description",
+    };
+    
+    axios
+      .put(
+        "https://tyraoeguv8.execute-api.us-east-1.amazonaws.com/items",
+        article
+      )
+      .then((response) => {});
+  }
   return (
     <>
       <div className="backgroundImg">
@@ -7,26 +35,26 @@ function SignupPatient() {
           <form>
             <div className="input-row">
               <div className="user-box-2">
-                <input type="text" name="firstName" required />
+                <input type="text" name="username" id="username" />
                 <label>Username</label>
               </div>
               <div className="user-box-2">
-                <input type="password" name="password" required />
+                <input type="password" name="password" id="password" />
                 <label>Password</label>
               </div>
             </div>
             <div className="input-row">
               <div className="user-box-2">
-                <input type="text" name="firstName" required />
+                <input type="text" name="firstname" id="firstname" />
                 <label>First Name</label>
               </div>
               <div className="user-box-2">
-                <input type="text" name="lastName" required />
+                <input type="text" name="lastname" id="lastname" />
                 <label>Last Name</label>
               </div>
               <div className="user-box-2">
                 <label className="gender-label"></label>
-                <select name="gender" required>
+                <select name="gender" id="gender">
                   <option value="">Select Sex</option>
                   <option className="dropdown-color" value="male">
                     Male
@@ -43,15 +71,15 @@ function SignupPatient() {
 
             <div className="input-row">
               <div className="user-box-2">
-                <input type="text" name="age" required />
+                <input type="text" name="age" id="age" />
                 <label>Age</label>
               </div>
               <div className="user-box-2">
-                <input type="text" name="weight" required />
+                <input type="text" name="weight" id="weight" />
                 <label>Weight (lb)</label>
               </div>
               <div className="user-box-2">
-                <input type="text" name="height" required />
+                <input type="text" name="height" id="height" />
                 <label>Height (cm)</label>
               </div>
             </div>
@@ -67,7 +95,11 @@ function SignupPatient() {
               </div>
             </div>
 
-            <button className="button" style={{ backgroundColor: "#373130", marginTop: '15px' }}>
+            <button
+              className="button"
+              onClick={putPatient}
+              style={{ backgroundColor: "#373130", marginTop: "15px" }}
+            >
               Sign Up
             </button>
           </form>
@@ -75,6 +107,8 @@ function SignupPatient() {
       </div>
     </>
   );
+
+  let e = document.getElementsByName("e");
 }
 
 export default SignupPatient;
