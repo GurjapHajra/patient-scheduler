@@ -29,15 +29,15 @@ function Login() {
   );
 }
 
-document.getElementById('show-password').addEventListener('change', function() {
-  var passwordField = document.getElementById('password');
+// document.getElementById('show-password').addEventListener('change', function() {
+//   var passwordField = document.getElementById('password');
   
-  if (this.checked) {
-    passwordField.type = 'text'; // Show password
-  } else {
-    passwordField.type = 'password'; // Hide password
-  }
-});
+//   if (this.checked) {
+//     passwordField.type = 'text'; // Show password
+//   } else {
+//     passwordField.type = 'password'; // Hide password
+//   }
+// });
 
 function logUser(event) {
     event.preventDefault();
