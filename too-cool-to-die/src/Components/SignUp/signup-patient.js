@@ -1,4 +1,5 @@
 import "./signup.css";
+<<<<<<< HEAD
 import axios from "axios";
 
 function SignupPatient() {
@@ -107,6 +108,15 @@ function SignupPatient() {
       </div>
     </>
   );
+=======
+function signup_patient() {
+    return(
+        <>
+            <div className="background">
+            </div>
+        </>
+    )
+>>>>>>> parent of a20a0fe (Link form)
 }
 
 export default SignupPatient;
