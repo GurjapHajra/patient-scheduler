@@ -28,6 +28,8 @@ ul {
   border-bottom-right-radius: 10px;
 }
 
+
+
 .nav_li {
   display: inline-block;
   padding: 1.5rem 0rem;
@@ -50,6 +52,19 @@ ul {
 .nav_li:hover {
   background-color: #008080 ;
   transform: scale(1.05);
+  filter: brightness(150%);
+  z-index: 100;
+}
+.navlink.active:hover {
+  background-color: inherit; 
+  transform: scale(1);
+  filter: none;
+}
+
+.navlink.active {
+  border-radius: 10px;
+  transform: none;
+  background-color: #008080 ;
   filter: brightness(150%);
   z-index: 100;
 }

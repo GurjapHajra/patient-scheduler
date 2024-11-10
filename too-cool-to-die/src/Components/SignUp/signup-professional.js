@@ -35,7 +35,7 @@ function SignupProfessional() {
 	  }
 	return (
 		<>
-			<div className="backgroundImg">
+			<div className="background">
 		  		<div className="signup-box mt-5">
 					<h2>New Professional Application</h2>
 					<form onSubmit={putProfessional}>
